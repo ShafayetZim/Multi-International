@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="page-header clearfix"
+            style="background-image: url({% static 'assets/images/backgrounds/page-header-bg.jpg' %});">
+            <div class="container">
+                <div class="page-header__inner clearfix">
+                    <h2 class="wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">Service
+                        Details</h2>
+                    <ul class="thm-breadcrumb list-unstyled wow slideInUp animated" data-wow-delay="0.3s"
+                        data-wow-duration="1500ms">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                        <li>Service Details</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+
+        <!--Services Details Start-->
+        <section class="services-details">
+            <div class="container">
+                <div class="row">
+                    <!--Start Services Details Sidebar-->
+                    <div class="col-xl-4 col-lg-8">
+                        <div class="services-details__sidebar">
+                            <div class="services-details__services-list-box wow fadeInUp animated" data-wow-delay="0.0s"
+                                data-wow-duration="1200ms">
+                                <h3 class="services-details__sidebar-title">All Service List</h3>
+                                <ul class="services-details__services-list list-unstyled">
+                                    <li><a href="#">Financial Planning <i class="fa fa-chevron-right"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#">Relationship Buildup <i class="fa fa-chevron-right"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#">Investement Planning <i class="fa fa-chevron-right"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#">Marketing Strategy <i class="fa fa-chevron-right"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#">Product Strategy <i class="fa fa-chevron-right"
+                                                aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="services-details__services-conatct-box wow fadeInUp animated"
+                                data-wow-delay="0.1s" data-wow-duration="1200ms">
+                                <h3 class="services-details__sidebar-title">Conatct Us</h3>
+                                <form id="review-form" action="#">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input-box">
+                                                <input type="email" name="email" placeholder="Email Address"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input-box">
+                                                <textarea name="review" placeholder="Message" required=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button class="conatct-one" type="submit">
+                                                <span class="thm-btn">Send Message<i class="fa fa-angle-double-right"
+                                                        aria-hidden="true"></i></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="services-details__services-brochures-box wow fadeInUp animated"
+                                data-wow-delay="0.3s" data-wow-duration="1200ms">
+                                <h2 class="services-details__sidebar-title">Brochures</h2>
+                                <div class="brochures-btn">
+                                    <a href="#" class="button">Download Doc<span class="icon-download icon"></span></a>
+                                </div>
+                                <div class="brochures-btn">
+                                    <a href="#" class="button">Download Pdf<span class="icon-pdf-file icon"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Services Details Sidebar-->
+
+                    <!--Start Services Details Content-->
+                    <div class="col-xl-8">
+                        <div class="services-details-content">
+                            <div class="services-details__text-box1">
+                                <h2>Management Consulting and <br>Business Strategy</h2>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+                                    tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            </div>
+                            <div class="services-details-img1">
+                                <img src="{% static 'assets/images/resources/services-details-img1.jpg' %}" alt="" />
+                            </div>
+                            <div class="services-details__text-box2">
+                                <h2>Realization Strategies</h2>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                                    quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed
+                                    quia non numquam eius modi tempora incidunt ut labore et dolore</p>
+                                <ul class="services-details__text-box2-list list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p>Static Innovations</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p>Static Innovations</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p>Static Innovations</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="services-details-img2">
+                                <img src="{% static 'assets/images/resources/services-details-img2.jpg' %}" alt="" />
+                            </div>
+                            <div class="services-details__text-box3">
+                                <p class="services-details__text-box3-text1">Our strategy consulting team implements
+                                    proven methodologies with <br>life sciences, consumer products, and retail companies
+                                    that transforms their business, drive growth, and facilitate </p>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Services Details Content-->
+                </div>
+            </div>
+        </section>
+        <!--Services Details End-->
+
+{% endblock content %}

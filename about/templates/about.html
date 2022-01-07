@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+        <!--Page Header Start-->
+        <section class="page-header clearfix"
+            style="background-image: url({% static 'assets/images/backgrounds/3.jpg' %});">
+            <div class="container">
+                <div class="page-header__inner clearfix">
+                    <h2 class="wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">About Us</h2>
+                    <ul class="thm-breadcrumb list-unstyled wow slideInUp animated" data-wow-delay="0.3s"
+                        data-wow-duration="1500ms">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+
+        <!--About One Start-->
+        <section class="about-one about-one--about">
+            <div class="container">
+                {% for x in about %}
+                <div class="row">
+                    <!-- Start About One Left-->
+                    <div class="col-xl-6">
+                        <div class="about-one__left">
+                            <div class="shape1"><img src="{{ x.shape.url }}" alt="" /></div>
+                            <div class="about-one__left-img">
+                                <img src="{{ x.icon.url }}" alt="" />
+                            </div>
+                            <div class="about-one__left-bottom">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End About One Left-->
+
+                    <!-- Start About One Right-->
+                    <div class="col-xl-6">
+                        <div class="about-one__right">
+                            <div class="section-title">
+                                <div class="section-title__tagline">
+                                    <span class="left"></span>
+                                    <h4>About Multi International</h4>
+                                </div>
+                                <!--<h2 class="section-title__title">Build Your Business<br>With Right Way</h2>-->
+                            </div>
+                            <div class="about-one__right-inner">
+                                <p class="about-one__right-text">{{ x.description }}</p>
+                                <ul class="about-one__right-buttom list-unstyled">
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End About One Right-->
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!--About One End-->
+
+        <!--Features Three Start-->
+        <section class="features-three features-three--about">
+            <div class="features-three__content-box">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <div class="section-title__tagline">
+                            <span class="left"></span>
+                            <h4>Vision of Multi International</h4><span class="right"></span>
+                        </div>
+                        <h2 class="section-title__title">Multi International</h2>
+                    </div>
+                    <div class="row">
+                        {% for w in vision %}
+                        <!--Start Single Features Three-->
+                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInLeft" data-wow-delay="0ms"
+                            data-wow-duration="1000ms">
+                            <div class="features-three__single text-center">
+
+                                <div class="features-three__single-icon">
+                                    <img src="{{ w.icon.url }}" alt="" />
+                                </div>
+                                <h4 class="features-three__single-title"><a href="#">{{ w.title }}</a></h4>
+                                <p class="features-three__single-text">{{ w.description }}</p>
+
+                            </div>
+                        </div>
+                        <!--End Single Features Three-->
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Features Three End-->
+
+        <!--Team One Start-->
+        <section class="team-one">
+             <div class="container">
+                <div class="section-title">
+                    <div class="section-title__tagline">
+                        <span class="left"></span>
+                        <h4>Our Consultants</h4>
+                    </div>
+                    <h2 class="section-title__title">Meet Our Professional<br>Team Member</h2>
+                </div>
+               <!--  <div class="row"> -->
+                    <div class="col-xl-12">
+                        <div class="team-one__content-wrapper">
+                            <div class="team-one__big-title">
+                                <h2>Team</h2>
+                            </div>
+                            <div class="row">
+                                {% for y in team %}
+                                <!--Start Single Team One-->
+                                <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0ms"
+                                    data-wow-duration="1500ms">
+                                    <div class="team-one__single">
+                                        <div class="team-one__single-wrapper">
+                                            <div class="team-one__single-img">
+                                                <img src="{{ y.pic.url }}" alt="" />
+                                            </div>
+                                            <div class="team-one__single-title">
+                                                <h4><a href="team-details.html">{{y.name}}</a></h4>
+                                                <p>{{ y.position}}</p>
+                                            </div>
+                                            <div class="team-one__single-title-overly">
+                                                <h4>{{y.name}}</h4>
+                                                <p>{{ y.position }}</p>
+                                                <ul class="social-icon list-unstyled">
+                                                    <li><a href="#"><i class="fab fa-facebook"
+                                                                aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"
+                                                                aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-youtube"
+                                                                aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-behance"
+                                                                aria-hidden="true"></i></a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Single Team One-->
+                               {% endfor %}
+                            </div>
+                        </div>
+
+
+                     </div><!-- /.page-wrapper -->
+
+                 </div>
+             </section>
+
+
+        <!--Why Choose One Start-->
+        <section class="why-choose-one">
+            <div class="container">
+                <div class="row">
+                    {% for z in choice %}
+                    <div class="col-xl-6">
+                        <div class="why-choose-one__content">
+                            <div class="section-title">
+                                <div class="section-title__tagline">
+                                    <span class="left"></span>
+                                    <h4>Why Choose Us</h4>
+                                </div>
+                                <h2 class="section-title__title">{{ z.title|safe }}</h2>
+                            </div>
+                            <ul class="why-choose-one__list list-unstyled">
+                                <li class="why-choose-one__list-single">
+                                    <div class="icon">
+                                        <i class="fa fa-check " aria-hidden="true"></i>
+                                    </div>
+                                    <div class="text">
+                                        <!-- <h3>Static Innovations</h3> -->
+                                        <p>{{ z.description|safe }}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                         </div>
+                    </div>
+                    <div class="col-xl-6 wow slideInRight" data-wow-delay="500ms" data-wow-duration="2500ms">
+                        <div class="why-choose-one__img">
+                            <img src="{{z.icon.url}}" alt="" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+{% endblock content %}

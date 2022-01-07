@@ -1,0 +1,49 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Location</th>
+                                                        <th>Mail1</th>
+                                                        <th>Mail2</th>
+                                                        <th>Phone1</th>
+                                                        <th>Phone2</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                {% for item in contact %}
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">{{item.id}}</th>
+                                                        <td>{{item.location|safe}}</td>
+                                                        <td>{{item.mail1}}</td>
+                                                        <td>{{item.mail2}}</td>
+                                                        <td>{{item.phone1}}</td>
+                                                        <td>{{item.phone2}}</td>
+                                                        <td>
+                                                            <a href="{% url 'contact-edit' item.id %}">
+                                                                <button class="btn btn-outline-info">Edit</button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+{% endblock content %}

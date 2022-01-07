@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+        <!--Page Header Start-->
+        <section class="page-header clearfix"
+            style="background-image: url({% static 'assets/images/backgrounds/3.jpg' %});">
+            <div class="container">
+                <div class="page-header__inner clearfix">
+                    <h2 class="wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">Our Services
+                    </h2>
+                    <ul class="thm-breadcrumb list-unstyled wow slideInUp animated" data-wow-delay="0.3s"
+                        data-wow-duration="1500ms">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+
+        <!--Features Three Start-->
+        <section class="features-three features-three--services"
+            style="background-image: url({% static 'assets/images/backgrounds/features-three--services-bg.png' %});">
+            <div class="features-three__content-box">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <div class="section-title__tagline">
+                            <span class="left"></span>
+                            <h4>How Can Help You</h4><span class="right"></span>
+                        </div>
+                        <h2 class="section-title__title">Most Trending Marketing<br>Consulting Topic</h2>
+                    </div>
+                    <div class="row">
+                        {% for item in service %}
+                        <!--Start Single Features Three-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="0ms"
+                            data-wow-duration="1000ms">
+                            <div class="features-three__single text-center">
+                                <div class="features-three__single-icon">
+                                    <img src="{{ item.icon.url }}" alt="" />
+                                </div>
+                                <h4 class="features-three__single-title"><a href="services-details.html">{{ item.title }}</a></h4>
+                                <p class="features-three__single-text">{{ item.content }}</p>
+                            </div>
+                        </div>
+                        <!--End Single Features Three-->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Features Three End-->
+
+{% endblock content %}

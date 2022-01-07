@@ -1,0 +1,88 @@
+{% load static %}
+{% block sidebar %}
+		<!-- ========== Left Sidebar Start ========== -->
+		<div class="vertical-menu">
+			<div data-simplebar class="h-100">
+				<!--- Sidemenu -->
+				<div id="sidebar-menu">
+					<!-- Left Menu Start -->
+					<ul class="metismenu list-unstyled" id="side-menu">
+						<li class="menu-title" key="t-menu">Menu</li>
+						<li>
+							<a href="{% url 'dashboard' %}" class="waves-effect"> <i class="ri-dashboard-line"></i>
+								<!-- <span class="badge rounded-pill bg-success float-end">3</span> -->
+								<span key="t-dashboards">Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);" class="has-arrow waves-effect"> <i class="ri-store-2-line"></i>
+								<span key="t-ecommerce">Home</span>
+							</a>
+							<ul class="sub-menu" aria-expanded="false">
+								<li><a href="{% url 'slider' %}"key="t-product-detail">Slider</a>
+								</li>
+								<li><a href="{% url 'feature' %}"key="t-orders">Feature</a>
+								</li>
+								<li><a href="{% url 'process' %}"key="t-customers">Working Process</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript: void(0);" class="has-arrow waves-effect"> <i class="ri-table-2"></i>
+								<span key="t-tables">About</span>
+							</a>
+							<ul class="sub-menu" aria-expanded="false">
+								<li><a href="{% url 'dash-about' %}" key="t-basic-tables" >About</a>
+								</li>
+								<li><a href="{% url 'choice' %}" key="t-data-tables" >Choice</a>
+								</li>
+								<li><a href="{% url 'team' %}" key="t-responsive-table" >Team</a>
+								</li>
+								<li><a href="{% url 'vision' %}" key="t-editable-table" >Vision</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="{% url 'dash-contact' %}" class=" waves-effect"> <i class="ri-artboard-2-line"></i>
+								<span key="t-kanban-board">Contact</span>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'dash-gallery' %}" class="waves-effect"> <i class="ri-layout-3-line"></i>
+								<span key="t-layouts">Gallery</span>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'dash-service' %}" class="waves-effect" key= > <i class="ri-profile-line"></i>
+								<span key="t-utility">Service</span>
+							</a>
+						</li>
+<!--						<li>-->
+<!--							<a href="javascript: void(0);" class="has-arrow waves-effect"> <i class="ri-account-circle-line"></i>-->
+<!--								<span key="t-authentication"> Authentication</span>-->
+<!--							</a>-->
+<!--							<ul class="sub-menu" aria-expanded="false">-->
+<!--								<li><a href="" key="t-login">Login</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-register" >Register</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-recover-password" >Recover Password</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-lock-screen" >Lock Screen</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-confirm-mail" >Confirm Mail</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-email-verification" >Email Verification</a>-->
+<!--								</li>-->
+<!--								<li><a href="" key="t-two-step-verification" >Two Step Verification</a>-->
+<!--								</li>-->
+<!--							</ul>-->
+<!--						</li>-->
+
+					</ul>
+				</div>
+				<!-- Sidebar -->
+			</div>
+		</div>
+		<!-- Left Sidebar End -->
+{% endblock sidebar %}

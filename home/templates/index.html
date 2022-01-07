@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+
+    <!--main div start-->
+        <!--<div class="container">-->
+                <section class="main-slider main-slider-one">
+                    <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": false, "effect": "fade", "pagination": {
+                "el": "#main-slider-pagination",
+                "type": "bullets",
+                "clickable": true
+                },
+                "navigation": {
+                "nextEl": "#main-slider__swiper-button-next",
+                "prevEl": "#main-slider__swiper-button-prev"
+                },
+                "autoplay": {
+                "delay": 5000
+                }}'>
+                        <div class="swiper-wrapper">
+                    <!--Start Single Swiper Slide-->
+                            {% for x in slider %}
+                    <div class="swiper-slide">
+                        <div class="image-layer"
+                            style="background-image: url({{x.image.url}});"></div>
+                        <div class="image-layer-overlay"></div>
+                        <!-- /.image-layer -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="main-slider__content text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            {% endfor %}
+                    <!--End Single Swiper Slide-->
+
+                    </div>
+                        <!--End Single Swiper Slide-->
+
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-pagination" id="main-slider-pagination"></div>
+                        <div class="main-slider__nav">
+                            <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                                <span class="icon-left"></span>
+                            </div>
+                            <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                                <span class="icon-right"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!--Features Four Start-->
+                <section class="features-four">
+                    <div class="container">
+                        <div class="row">
+                            <!--Start Features Four Left-->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="features-four__left">
+
+                                    <div class="section-title">
+                                        <div class="section-title__tagline">
+                                            <span class="left"></span>
+                                            <h4>How Can Help You</h4>
+                                        </div>
+                                        <h2 class="section-title__title">We Make Your<br>Agency Are<br>Full Bright</h2>
+                                    </div>
+                                    <div class="features-four__left-bottom">
+                                        <p class="features-four__left-text">Change is the most cherished desire of customers these days.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Features Four Left-->
+
+                            <!--Start Features Four Right-->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="features-four__right">
+                                    <ul class="list-unstyled">
+                                        {% for y in feature %}
+                                        <li class="features-four__right-single">
+                                            <div class="features-four__right-single-inner">
+                                                <div class="icon">
+                                                    <img src="{{y.icon.url}}" alt="" />
+                                                </div>
+                                                <div class="title">
+                                                    <h4>{{y.right_title}}</h4>
+                                                    <p>{{y.description}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--End Features Four Right-->
+                        </div>
+                    </div>
+                </section>
+                <!--Features Four End-->
+
+
+                <!--Services Three Start-->
+                <section class="services-three clearfix">
+                    <div class="container">
+                        <div class="section-title text-center">
+                            <div class="section-title__tagline">
+                                <span class="left"></span>
+                                <h4>Working Process</h4><span class="right"></span>
+                            </div>
+                            <h2 class="section-title__title">We Follow Some Steps To<br>Grow Business</h2>
+                        </div>
+                        <div class="row">
+                            <!--Start Single Services Three-->
+                            {% for z in process %}
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 wow animated fadeInUp" data-wow-delay="0.1s">
+                                <div class="services-three__single">
+                                    <div class="services-three__single-icon">
+                                        <span class="icon-brainstorm"></span>
+                                    </div>
+                                    <div id="moreText" class="services-three__single-inner">
+                                        <h3 class="services-three__single-title"><a href="services-details.html">{{ z.title }}</a></h3>
+                                        <p id="myId" class="services-three__single-text show-read-more">{{ z.description }}</p>
+                                    </div>
+                                    <div class="services-three__single-icon-layer">
+                                        <span class="icon-brainstorm"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!--End Single Services Three-->
+
+                        </div>
+                    </div>
+                </section>
+                <!--Services Three End-->
+
+        <!--</div>-->
+    <!--main div ends-->
+    {% endblock content %}

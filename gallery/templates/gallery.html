@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+        <!--Page Header Start-->
+        <section class="page-header clearfix"
+            style="background-image: url({% static 'assets/images/backgrounds/3.jpg' %});">
+            <div class="container">
+                <div class="page-header__inner clearfix">
+                    <h2 class="wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        Gallery
+                    </h2>
+                    <ul class="thm-breadcrumb list-unstyled wow slideInUp animated" data-wow-delay="0.3s"
+                        data-wow-duration="1500ms">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                        <li>Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Case Studies One Start-->
+        <section class="case-studies-one case-studies-one--portfolio-grid">
+            <div class="container">
+
+
+                <div class="row filter-layout masonary-layout">
+                    {% for item in gallery %}
+                    <!--Start Case Studies One Single-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 filter-item development finance">
+                        <div class="case-studies-one__single">
+                            <div class="case-studies-one__single-img">
+                                <img src="{{ item.image.url }}" alt="" />
+                                <div class="overly-text">
+                                    <p>{{ item.title }}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Case Studies One Single-->
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--Case Studies One End-->
+
+{% endblock content %}
