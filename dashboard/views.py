@@ -380,7 +380,7 @@ def create_vision(request):
 
             obj.save()
             message = "Success"
-            return redirect('Vision')
+            return redirect('vision')
 
     return render(request, template_name, {'vision_form': vision_form, 'message': message, 'title': "Create Vision", 'pageview': "About"})
 
