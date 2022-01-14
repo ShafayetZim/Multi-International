@@ -25,7 +25,7 @@
                                                     <tr>
                                                         <th scope="row">{{item.id}}</th>
                                                         <td>{{item.title}}</td>
-                                                        <td>{{item.description}}</td>
+                                                        <td>{{item.description|safe}}</td>
                                                         <td>
                                                             <a href="{% url 'process-edit' item.id %}">
                                                                 <button class="btn btn-outline-info">Edit</button>

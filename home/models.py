@@ -1,5 +1,6 @@
 from django.db import models
 from PIL import Image
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
@@ -23,7 +24,8 @@ class Base(models.Model):
 
 class Feature(models.Model):
     right_title = models.CharField(max_length=200)
-    description = models.TextField()
+    # description = models.TextField()
+    description = RichTextField()
     icon = models.ImageField(upload_to='pics')
 
     def __str__(self):
@@ -32,7 +34,8 @@ class Feature(models.Model):
 
 class WorkingProcess(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    # description = models.TextField()
+    description = RichTextField()
 
     def __str__(self):
         return self.title

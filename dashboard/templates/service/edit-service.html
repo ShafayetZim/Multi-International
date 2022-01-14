@@ -11,6 +11,9 @@
         <!-- dropzone css -->
         <link href="{% static 'dashboard/libs/dropzone/min/dropzone.min.css' %}" rel="stylesheet" type="text/css" />
 
+        <script type="text/javascript" src="{% static 'dashboard/ckeditor/ckeditor-init.js' %}"></script>
+        <script type="text/javascript" src="{% static 'dashboard/ckeditor/ckeditor/ckeditor.js' %}"></script>
+
 {% endblock extra_css %}
 
 {% block content %}
@@ -20,6 +23,7 @@
                                     <div class="card-body">
                                         <form method="POST" enctype="multipart/form-data">
                                             {% csrf_token %}
+                                            {{ form.media }}
 
                                           <div class="form-group mb-3">
                                               {{ form.title|as_crispy_field }}

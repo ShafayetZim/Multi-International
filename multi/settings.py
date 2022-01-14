@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'users',
     'authentication',
+    'ckeditor',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
     'service.apps.ServiceConfig',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'tinymce',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

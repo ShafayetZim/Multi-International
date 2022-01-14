@@ -40,6 +40,7 @@ urlpatterns = [
     path('', include('gallery.urls')),
     path('', include('contact.urls')),
     path('', include('dashboard.urls')),
+    # path('tinymce/', include('tinymce.urls')),
     # path('accounts/',include('django.contrib.authentication.urls')),
 ]
 

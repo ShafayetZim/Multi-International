@@ -12,3 +12,4 @@ def about(request):
         'pageview': "About",
     }
     return render(request, 'about.html', context)
+
